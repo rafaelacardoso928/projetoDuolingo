@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <!-- TÍTULO -->
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Practice"
+        android:textColor="#303946"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvLives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="♥ 5"
+        android:textColor="#FF4B4B"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        android:layout_marginEnd="28dp"/>
+
+
+    <!-- STORIES -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardStories"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#F1FAFF"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/iconStories"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:text="📖"
+                android:textSize="19sp"
+                android:background="#E8E8FF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/titleStories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Stories"
+                android:textColor="#303946"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/iconStories"
+                app:layout_constraintEnd_toStartOf="@id/arrowStories"
+                app:layout_constraintTop_toTopOf="@id/iconStories"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/subtitleStories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Read and complete"
+                android:textColor="#7C8795"
+                android:textSize="9sp"
+                app:layout_constraintStart_toStartOf="@id/titleStories"
+                app:layout_constraintTop_toBottomOf="@id/titleStories"
+                android:layout_marginTop="1dp"/>
+
+            <TextView
+                android:id="@+id/arrowStories"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="#AEB5BC"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- SPEAKING -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSpeaking"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/cardStories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="7dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/iconSpeaking"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:text="🎤"
+                android:textSize="18sp"
+                android:background="#DDF3FF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/titleSpeaking"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Speaking"
+                android:textColor="#303946"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/iconSpeaking"
+                app:layout_constraintEnd_toStartOf="@id/arrowSpeaking"
+                app:layout_constraintTop_toTopOf="@id/iconSpeaking"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/subtitleSpeaking"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Practice your pronunciation"
+                android:textColor="#7C8795"
+                android:textSize="9sp"
+                app:layout_constraintStart_toStartOf="@id/titleSpeaking"
+                app:layout_constraintTop_toBottomOf="@id/titleSpeaking"
+                android:layout_marginTop="1dp"/>
+
+            <TextView
+                android:id="@+id/arrowSpeaking"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="#AEB5BC"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- LISTENING -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardListening"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/cardSpeaking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="7dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/iconListening"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:text="🎧"
+                android:textSize="18sp"
+                android:background="#FFE3E3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/titleListening"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Listening"
+                android:textColor="#303946"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/iconListening"
+                app:layout_constraintEnd_toStartOf="@id/arrowListening"
+                app:layout_constraintTop_toTopOf="@id/iconListening"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/subtitleListening"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Understand native speakers"
+                android:textColor="#7C8795"
+                android:textSize="9sp"
+                app:layout_constraintStart_toStartOf="@id/titleListening"
+                app:layout_constraintTop_toBottomOf="@id/titleListening"
+                android:layout_marginTop="1dp"/>
+
+            <TextView
+                android:id="@+id/arrowListening"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="#AEB5BC"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- MISTAKES -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMistakes"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/cardListening"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="7dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/iconMistakes"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:text="↻"
+                android:textColor="#58CC02"
+                android:textSize="23sp"
+                android:background="#E5F8D8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/titleMistakes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Mistakes"
+                android:textColor="#303946"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/iconMistakes"
+                app:layout_constraintEnd_toStartOf="@id/arrowMistakes"
+                app:layout_constraintTop_toTopOf="@id/iconMistakes"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/subtitleMistakes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Review and improve"
+                android:textColor="#7C8795"
+                android:textSize="9sp"
+                app:layout_constraintStart_toStartOf="@id/titleMistakes"
+                app:layout_constraintTop_toBottomOf="@id/titleMistakes"
+                android:layout_marginTop="1dp"/>
+
+            <TextView
+                android:id="@+id/arrowMistakes"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="#AEB5BC"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- WORDS -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardWords"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/cardMistakes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="7dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/iconWords"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:text="★"
+                android:textColor="#FFC800"
+                android:textSize="23sp"
+                android:background="#FFF4C9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/titleWords"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Words"
+                android:textColor="#303946"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/iconWords"
+                app:layout_constraintEnd_toStartOf="@id/arrowWords"
+                app:layout_constraintTop_toTopOf="@id/iconWords"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/subtitleWords"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Learn new vocabulary"
+                android:textColor="#7C8795"
+                android:textSize="9sp"
+                app:layout_constraintStart_toStartOf="@id/titleWords"
+                app:layout_constraintTop_toBottomOf="@id/titleWords"
+                android:layout_marginTop="1dp"/>
+
+            <TextView
+                android:id="@+id/arrowWords"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="#AEB5BC"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- MASCOTE -->
+
+
+    <!-- MENSAGEM -->
+
+
+    <!-- BOTÃO -->
+
+    <ImageView
+        android:id="@+id/imgMascot"
+        android:layout_width="256dp"
+        android:layout_height="182dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="Mascote"
+        android:scaleType="centerInside"
+        android:src="@drawable/duo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardWords" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="35dp"
+        android:gravity="center"
+        android:text="Skills in the Practice tab are now free for everyone!"
+        android:textColor="#303946"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgMascot"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGotIt"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="40dp"
+        android:text="GOT IT"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:backgroundTint="#42B5E8"
+        app:cornerRadius="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage"
+        app:layout_constraintVertical_bias="0.79" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
